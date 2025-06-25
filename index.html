@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1 class="title">Responsive Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('people')">People</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item nature">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Nature 1" onclick="openLightbox(this)">
+    </div>
+    <div class="gallery-item city">
+      <img src="https://picsum.photos/id/1011/600/400" alt="City 1" onclick="openLightbox(this)">
+    </div>
+    <div class="gallery-item people">
+      <img src="https://picsum.photos/id/1005/600/400" alt="People 1" onclick="openLightbox(this)">
+    </div>
+    <div class="gallery-item nature">
+      <img src="https://picsum.photos/id/1016/600/400" alt="Nature 2" onclick="openLightbox(this)">
+    </div>
+    <div class="gallery-item city">
+      <img src="https://picsum.photos/id/1012/600/400" alt="City 2" onclick="openLightbox(this)">
+    </div>
+    <div class="gallery-item people">
+      <img src="https://picsum.photos/id/1006/600/400" alt="People 2" onclick="openLightbox(this)">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <div class="nav">
+      <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+      <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
